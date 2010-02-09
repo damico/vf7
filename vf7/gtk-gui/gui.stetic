@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.10</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Release/test.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="133 121">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">vF7</property>
+    <property name="Icon">stock:stock_notebook LargeToolbar</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="WidthRequest">115</property>
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Statusbar" id="statusbar3">
+            <property name="MemberName" />
+            <property name="WidthRequest">105</property>
+            <property name="Sensitive">False</property>
+            <property name="Spacing">100</property>
+            <child>
+              <widget class="Gtk.Label" id="status">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">off</property>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="X">2</property>
+            <property name="Y">75</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button1">
+            <property name="MemberName" />
+            <property name="WidthRequest">105</property>
+            <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Video on</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton1Clicked" />
+          </widget>
+          <packing>
+            <property name="X">5</property>
+            <property name="Y">5</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button2">
+            <property name="MemberName" />
+            <property name="WidthRequest">105</property>
+            <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Video off</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton2Clicked" />
+          </widget>
+          <packing>
+            <property name="X">5</property>
+            <property name="Y">40</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
