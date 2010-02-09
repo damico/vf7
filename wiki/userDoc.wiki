@@ -1,0 +1,36 @@
+#summary documentation of vf7
+
+= Introduction =
+
+This is a very small application, but very useful for who has Thinkpad R & T versions, using Debian. 
+
+In order to understand, what this application solves, is necessary to understand the problem.
+
+
+= The problem =
+
+Export the X output to an external monitor or projector.
+
+In the basic configuration of Debian, with minimal packages, the Xorg configuration does not support a virtual screen to use with external devices.
+
+The first thing to do is to re-configure the Xorg (At [xorg_setup] you can see the details of configuration).
+
+Once Xorg is re-configured you need to run xrandr to send the X output as you want.
+The xrandr sintax to export is something like this
+{{{
+ $ xrandr --output VGA --right-of LVDS --mode 1024x768
+}}}
+After the use of an external X outuput you will need to call xrandr again to revert the setup:
+{{{
+ $ xrandr --output LVDS --auto --output VGA --off 
+}}}
+
+However, write these commands every-time is boring. For this reason I've wrote this app to handle the problem.
+
+Of course, the "common" solution is to handle the acpi events, with the "thinkpad special keys module" but I choose use an application as a solution for who does not want touch the kernel or acpi setup. Also it was a fun way to write something in C# using Mono.
+
+= Dependencies = 
+
+ * [xorg_setup Xorg re-configuration]
+ * xrandr
+ * Mono
