@@ -1,0 +1,52 @@
+#summary The most important part of xorg.conf, that enables VGA output.
+
+
+ * Into your xorg.conf look for the default Monitor section:
+
+{{{
+
+Section "Monitor"
+       Identifier       "Generic Monitor"
+       Option           "DPMS"
+EndSection
+
+}}}
+
+ * After this section, add a new one, to enable the output VGA, like this:
+
+{{{
+
+Section "Monitor"
+       Identifier      "TV"
+       Option          "Ignore" "True"
+EndSection
+
+}}}
+
+ * Now, look for the Default Screen section:
+
+{{{
+
+Section "Screen"
+       Identifier       "Default Screen"
+       Device           "Intel Corporation Mobile 945GM/GMS, 943/940GML Express Integrated Graphics Controller"
+       Monitor          "Generic Monitor"
+       DefaultDepth     24
+       SubSection "Display"
+           Virtual              3200 1200
+       EndSubSection
+EndSection
+
+}}}
+
+ * In this section make sure to add the following Display SubSection:
+
+{{{
+
+       SubSection "Display"
+           Virtual              3200 1200
+       EndSubSection
+
+}}}
+
+ * This subsection will enable the use of output VGA port controlled by the default video device. (To see the entire xorg.conf, click at [xorgconf])
