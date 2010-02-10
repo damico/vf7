@@ -34,3 +34,23 @@ Of course, the "common" solution is to handle the acpi events, with the "thinkpa
  * [xorg_setup Xorg re-configuration]
  * xrandr
  * Mono
+
+= How it works =
+
+The binary file of vf7 is vf7.exe which should be invoked thought mono, like this:
+
+{{{
+
+$ mono vf7.exe
+
+}}} 
+
+Note that if you have installed using the deb package you will find a script at /usr/bin/vf7 this script contains the following line:
+
+{{{
+
+mono /usr/lib/vf7.exe 800x600
+
+}}}
+
+Note that exists a "800x600" argument. This argument says to vf7 that an external vga output must be in a "800x600" resolution.
