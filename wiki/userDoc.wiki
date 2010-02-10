@@ -58,3 +58,8 @@ Note that exists a "800x600" argument. This argument says to vf7 that an externa
 One way to see which output resolution is configured is:
  * Start vf7 and check the left-bottom corner:
 [http://vf7.googlecode.com/files/vfc_screenshot2.png]
+
+== Xorg Validation ==
+
+An important feature of vF7 is the "xorg.conf validation". Every-time when vF7 is invoked, it checks xorg.conf setup to assure that it is configured to support an external VGA output. But, if xorg.conf is mis-configured, the vF7 will show this message:
+[http://vf7.googlecode.com/files/Screenshot-Problem.png]
