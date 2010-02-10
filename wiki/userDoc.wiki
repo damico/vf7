@@ -53,4 +53,7 @@ mono /usr/lib/vf7.exe 800x600
 
 }}}
 
-Note that exists a "800x600" argument. This argument says to vf7 that an external vga output must be in a "800x600" resolution.
+Note that exists a "800x600" argument. This argument says to vf7 that an external vga output must be in a "800x600" resolution. However, is important to understand that if no argument is passed the vf7 app will assume an external output with resolution of "1024x768"
+
+One way to see which output resolution is configured is:
+ * Start vf7 and check the left-bottom corner:
