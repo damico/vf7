@@ -1,27 +1,19 @@
-﻿<UserCombinePreferences version="1.0" filename="/home/jdamico/vf7/vf7.sln">
-  <Files>
-    <File name="Welcome" />
-    <File name="vf7/AssemblyInfo.cs" line="7" column="30" />
-    <File name="vf7/MainWindow.cs" line="15" column="19" />
-    <File name="vf7/gtk-gui/generated.cs" line="1" column="1" />
-    <File name="vf7/gtk-gui/MainWindow.cs" line="1" column="1" />
-    <File name="vf7/Main.cs" line="4" column="14" />
-    <File name="vf7.userprefs" line="1" column="1" />
-    <File name="vf7.usertasks" line="1" column="1" />
-    <File name="vf7 Status" />
-  </Files>
-  <Views>
-    <ViewMemento id="ProjectPad">
-      <Node expanded="True" selected="True">
-        <Node name="vf7" expanded="True" />
-      </Node>
-    </ViewMemento>
-    <ViewMemento id="ClassPad">
-      <Node selected="True" />
-    </ViewMemento>
-  </Views>
-  <Properties>
-    <Property key="ActiveWindow" value="vf7 Status" />
-    <Property key="ActiveConfiguration" value="Debug|x86" />
-  </Properties>
-</UserCombinePreferences>
+﻿<Properties>
+  <AuthorInfo Name="Jose Damico" Email="jd.comment@gmail.com" Copyright="jdamico" ctype="AuthorInformation" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="vf7/MainWindow.cs" ctype="Workbench">
+    <Files>
+      <File FileName="vf7/MainWindow.cs" Line="46" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="vf7" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

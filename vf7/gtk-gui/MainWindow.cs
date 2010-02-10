@@ -14,13 +14,13 @@ public partial class MainWindow {
     
     private Gtk.Fixed fixed1;
     
-    private Gtk.Statusbar statusbar3;
-    
-    private Gtk.Label status;
-    
     private Gtk.Button button1;
     
     private Gtk.Button button2;
+    
+    private Gtk.Label status;
+    
+    private Gtk.Label label1;
     
     protected virtual void Build() {
         Stetic.Gui.Initialize(this);
@@ -37,25 +37,6 @@ public partial class MainWindow {
         this.fixed1.Name = "fixed1";
         this.fixed1.HasWindow = false;
         // Container child fixed1.Gtk.Fixed+FixedChild
-        this.statusbar3 = new Gtk.Statusbar();
-        this.statusbar3.WidthRequest = 105;
-        this.statusbar3.Sensitive = false;
-        this.statusbar3.Name = "statusbar3";
-        this.statusbar3.Spacing = 100;
-        // Container child statusbar3.Gtk.Box+BoxChild
-        this.status = new Gtk.Label();
-        this.status.Name = "status";
-        this.status.LabelProp = Mono.Unix.Catalog.GetString("off");
-        this.statusbar3.Add(this.status);
-        Gtk.Box.BoxChild w1 = ((Gtk.Box.BoxChild)(this.statusbar3[this.status]));
-        w1.Position = 1;
-        w1.Expand = false;
-        w1.Fill = false;
-        this.fixed1.Add(this.statusbar3);
-        Gtk.Fixed.FixedChild w2 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.statusbar3]));
-        w2.X = 2;
-        w2.Y = 75;
-        // Container child fixed1.Gtk.Fixed+FixedChild
         this.button1 = new Gtk.Button();
         this.button1.WidthRequest = 105;
         this.button1.CanFocus = true;
@@ -64,9 +45,9 @@ public partial class MainWindow {
         this.button1.UseUnderline = true;
         this.button1.Label = Mono.Unix.Catalog.GetString("Video on");
         this.fixed1.Add(this.button1);
-        Gtk.Fixed.FixedChild w3 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
-        w3.X = 5;
-        w3.Y = 5;
+        Gtk.Fixed.FixedChild w1 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
+        w1.X = 5;
+        w1.Y = 5;
         // Container child fixed1.Gtk.Fixed+FixedChild
         this.button2 = new Gtk.Button();
         this.button2.WidthRequest = 105;
@@ -76,17 +57,34 @@ public partial class MainWindow {
         this.button2.UseUnderline = true;
         this.button2.Label = Mono.Unix.Catalog.GetString("Video off");
         this.fixed1.Add(this.button2);
-        Gtk.Fixed.FixedChild w4 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.button2]));
-        w4.X = 5;
-        w4.Y = 40;
+        Gtk.Fixed.FixedChild w2 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.button2]));
+        w2.X = 5;
+        w2.Y = 40;
+        // Container child fixed1.Gtk.Fixed+FixedChild
+        this.status = new Gtk.Label();
+        this.status.Name = "status";
+        this.status.LabelProp = Mono.Unix.Catalog.GetString("off");
+        this.fixed1.Add(this.status);
+        Gtk.Fixed.FixedChild w3 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.status]));
+        w3.X = 95;
+        w3.Y = 70;
+        // Container child fixed1.Gtk.Fixed+FixedChild
+        this.label1 = new Gtk.Label();
+        this.label1.Name = "label1";
+        this.label1.LabelProp = Mono.Unix.Catalog.GetString("1024x768");
+        this.fixed1.Add(this.label1);
+        Gtk.Fixed.FixedChild w4 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.label1]));
+        w4.X = 10;
+        w4.Y = 70;
         this.Add(this.fixed1);
         if ((this.Child != null)) {
             this.Child.ShowAll();
         }
-        this.DefaultWidth = 133;
-        this.DefaultHeight = 121;
+        this.DefaultWidth = 120;
+        this.DefaultHeight = 112;
         this.Show();
         this.DeleteEvent += new Gtk.DeleteEventHandler(this.OnDeleteEvent);
+        this.fixed1.KeyPressEvent += new Gtk.KeyPressEventHandler(this.OnFixed1KeyPressEvent);
         this.button1.Clicked += new System.EventHandler(this.OnButton1Clicked);
         this.button2.Clicked += new System.EventHandler(this.OnButton2Clicked);
     }

@@ -6,9 +6,9 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <widget-library name="../bin/Release/test.exe" internal="true" />
+    <widget-library name="../bin/Debug/test.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="133 121">
+  <widget class="Gtk.Window" id="MainWindow" design-size="120 112">
     <property name="MemberName" />
     <property name="Title" translatable="yes">vF7</property>
     <property name="Icon">stock:stock_notebook LargeToolbar</property>
@@ -21,30 +21,7 @@
         <property name="MemberName" />
         <property name="WidthRequest">115</property>
         <property name="HasWindow">False</property>
-        <child>
-          <widget class="Gtk.Statusbar" id="statusbar3">
-            <property name="MemberName" />
-            <property name="WidthRequest">105</property>
-            <property name="Sensitive">False</property>
-            <property name="Spacing">100</property>
-            <child>
-              <widget class="Gtk.Label" id="status">
-                <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">off</property>
-              </widget>
-              <packing>
-                <property name="Position">1</property>
-                <property name="AutoSize">True</property>
-                <property name="Expand">False</property>
-                <property name="Fill">False</property>
-              </packing>
-            </child>
-          </widget>
-          <packing>
-            <property name="X">2</property>
-            <property name="Y">75</property>
-          </packing>
-        </child>
+        <signal name="KeyPressEvent" handler="OnFixed1KeyPressEvent" />
         <child>
           <widget class="Gtk.Button" id="button1">
             <property name="MemberName" />
@@ -75,6 +52,26 @@
           <packing>
             <property name="X">5</property>
             <property name="Y">40</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="status">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">off</property>
+          </widget>
+          <packing>
+            <property name="X">95</property>
+            <property name="Y">70</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">1024x768</property>
+          </widget>
+          <packing>
+            <property name="X">10</property>
+            <property name="Y">70</property>
           </packing>
         </child>
       </widget>

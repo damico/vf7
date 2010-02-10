@@ -13,6 +13,7 @@ public partial class MainWindow : Gtk.Window
 		mode = "1024x768";		
 		if(res!=null) mode = res;
 		Build ();
+		this.label1.LabelProp = mode;
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -28,7 +29,8 @@ public partial class MainWindow : Gtk.Window
 		Process proc = new Process();
 		proc.StartInfo.FileName = xrandr_cmd;
 		proc.Start();
-		this.status.LabelProp = "on";                
+		this.status.LabelProp = "on";
+		
 		                           
 	}
 	
@@ -42,6 +44,24 @@ public partial class MainWindow : Gtk.Window
 		this.status.LabelProp = "off";
 	}
 	
+	protected virtual void OnFixed1KeyPressEvent (object o, Gtk.KeyPressEventArgs args)
+	{
+		uint key = args.Event.KeyValue;
+		if(key==65470)
+		{
+			MessageDialog md = new MessageDialog (null, 
+                                   DialogFlags.DestroyWithParent,
+			                       MessageType.Info, 
+                                   ButtonsType.Close, 	"vF7: version 0.0.6 - 2010\n" +
+                                   						"written by Jose Damico" +
+                                   						"\nhttp://vf7.googlecode.com");
+			md.Modal = false;
+			md.Title = "About";
+			md.Icon = Gtk.IconTheme.Default.LoadIcon("stock_notebook", 24, 0);
+			int result = md.Run ();
+			md.Destroy();
+		}
 	
+	}
 	
 }

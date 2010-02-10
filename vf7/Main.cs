@@ -10,6 +10,8 @@ namespace vf7
 		public static void Main (string[] args)
 		{
 
+			
+			
 			string res = null;
 			
 			try{
@@ -27,7 +29,15 @@ namespace vf7
 			Application.Init ();
 			MainWindow win = new MainWindow (res);
 			win.Show ();
+			
+			Utils util = new Utils();
+			util.checkXorg();
 			Application.Run ();
+			
+			
+			
 		}
 	}
+	
+	
 }
