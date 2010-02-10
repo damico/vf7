@@ -57,3 +57,4 @@ Note that exists a "800x600" argument. This argument says to vf7 that an externa
 
 One way to see which output resolution is configured is:
  * Start vf7 and check the left-bottom corner:
+[http://vf7.googlecode.com/files/vfc_screenshot2.png]
