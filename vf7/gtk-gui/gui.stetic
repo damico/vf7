@@ -67,7 +67,6 @@
         <child>
           <widget class="Gtk.Label" id="label1">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">1024x768</property>
           </widget>
           <packing>
             <property name="X">10</property>

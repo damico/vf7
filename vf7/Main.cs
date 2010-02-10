@@ -12,12 +12,12 @@ namespace vf7
 
 			
 			
-			string res = null;
+			string res = "--";
 			
 			try{
 				 res = args[0];
 			}catch (Exception e){
-				
+				Console.WriteLine("Unhandled exception!");
 			}
 			
 			if(res!=null){

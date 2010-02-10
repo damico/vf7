@@ -14,6 +14,7 @@ public partial class MainWindow : Gtk.Window
 		if(res!=null) mode = res;
 		Build ();
 		this.label1.LabelProp = mode;
+		
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -30,6 +31,7 @@ public partial class MainWindow : Gtk.Window
 		proc.StartInfo.FileName = xrandr_cmd;
 		proc.Start();
 		this.status.LabelProp = "on";
+		this.label1.LabelProp = mode;
 		
 		                           
 	}
@@ -42,6 +44,7 @@ public partial class MainWindow : Gtk.Window
 		proc.StartInfo.FileName = xrandr_cmd;
 		proc.Start();
 		this.status.LabelProp = "off";
+		this.label1.LabelProp = mode;
 	}
 	
 	protected virtual void OnFixed1KeyPressEvent (object o, Gtk.KeyPressEventArgs args)
@@ -52,7 +55,7 @@ public partial class MainWindow : Gtk.Window
 			MessageDialog md = new MessageDialog (null, 
                                    DialogFlags.DestroyWithParent,
 			                       MessageType.Info, 
-                                   ButtonsType.Close, 	"vF7: version 0.0.6 - 2010\n" +
+                                   ButtonsType.Close, 	"vF7: version 0.1 - 10/feb/2010\n" +
                                    						"written by Jose Damico" +
                                    						"\nhttp://vf7.googlecode.com");
 			md.Modal = false;

@@ -15,8 +15,7 @@ Global
 		{04FCE2CF-9358-4D48-9403-6A40C46B6002}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		description = "@This is a small application written in c# with Mono.\nThis app intents to export the laptop video output to an external monitor or projector. "
-		version = 0.0.6
+		description = "@Graphical interface for xrandr. \nThis is a small application written in c# with Mono.\nThis app intents to export the laptop video output to an external monitor or projector. "
 		StartupItem = vf7\vf7.csproj
 	EndGlobalSection
 EndGlobal

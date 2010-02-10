@@ -71,7 +71,6 @@ public partial class MainWindow {
         // Container child fixed1.Gtk.Fixed+FixedChild
         this.label1 = new Gtk.Label();
         this.label1.Name = "label1";
-        this.label1.LabelProp = Mono.Unix.Catalog.GetString("1024x768");
         this.fixed1.Add(this.label1);
         Gtk.Fixed.FixedChild w4 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.label1]));
         w4.X = 10;

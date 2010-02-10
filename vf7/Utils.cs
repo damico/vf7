@@ -49,7 +49,7 @@ namespace vf7
                 	}
 				}
         	} catch (Exception e) {
-            	Console.WriteLine("The file ("+fileName+") could not be read:");
+            	Console.WriteLine("The file ("+fileName+") could not be read!");
         	}
 
 			if(monitors == 2 && virtualDisplay == 1) ret = true;
