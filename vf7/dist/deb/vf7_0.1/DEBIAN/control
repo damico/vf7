@@ -1,0 +1,17 @@
+Package: vf7
+Version: 0.1
+Section: devel
+Priority: optional
+Architecture: all
+Depends: x11-xserver-utils, mono-common
+Recommends: mono-gmcs 
+Suggests: libmono-dev
+Conflicts: 
+Replaces: 
+Installed-Size: 15200
+Maintainer: Jose Ricardo de Oliveira Damico <jd.comment@gmail.com>
+Description: Graphical interface for xrandr.
+ This is a small application written in c# with Mono.
+ This app intents to export the laptop video output to an external monitor or projector. 
+ For more information see http://vf7.googlecode.com
+

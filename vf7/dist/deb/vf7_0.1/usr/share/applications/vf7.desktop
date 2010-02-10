@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=vf7
+Comment=Virtual F7 key
+Exec=vf7
+Icon=vf7
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;Application;Utility;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=vf7
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-OtherBinaries=vf7
+Name[en_US]=vf7
