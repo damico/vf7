@@ -1,0 +1,64 @@
+# Introduction #
+
+This is a very small application, but very useful for who has Thinkpad R & T versions, using Debian.
+
+In order to understand, what this application solves, is necessary to understand the problem.
+
+
+# The problem #
+
+Export the X output to an external monitor or projector.
+
+In the basic configuration of Debian, with minimal packages, the Xorg configuration does not support a virtual screen to use with external devices.
+
+The first thing to do is to re-configure the Xorg (At [xorg\_setup](xorg_setup.md) you can see the details of configuration).
+
+Once Xorg is re-configured you need to run xrandr to send the X output as you want.
+The xrandr sintax to export is something like this
+```
+ $ xrandr --output VGA --right-of LVDS --mode 1024x768
+```
+After the use of an external X outuput you will need to call xrandr again to revert the setup:
+```
+ $ xrandr --output LVDS --auto --output VGA --off 
+```
+
+However, write these commands every-time is boring. For this reason I've wrote this app to handle the problem.
+
+Of course, the "common" solution is to handle the acpi events, with the "thinkpad special keys module" but I choose use an application as a solution for who does not want touch the kernel or acpi setup. Also it was a fun way to write something in C# using Mono.
+
+# Dependencies #
+
+  * [Xorg re-configuration](xorg_setup.md)
+  * xrandr
+  * Mono
+
+# How it works #
+
+The binary file of vf7 is vf7.exe which should be invoked thought mono, like this:
+
+```
+
+$ mono vf7.exe
+
+```
+
+Note that if you have installed using the deb package you will find a script at /usr/bin/vf7 this script contains the following line:
+
+```
+
+mono /usr/lib/vf7.exe 800x600
+
+```
+
+Note that exists a "800x600" argument. This argument says to vf7 that an external vga output must be in a "800x600" resolution. However, is important to understand that if no argument is passed the vf7 app will assume an external output with resolution of "1024x768"
+
+One way to see which output resolution is configured is:
+  * Start vf7 and check the left-bottom corner:
+![http://vf7.googlecode.com/files/vfc_screenshot2.png](http://vf7.googlecode.com/files/vfc_screenshot2.png)
+
+## Xorg Validation ##
+
+An important feature of vF7 is the "xorg.conf validation". Every-time when vF7 is invoked, it checks xorg.conf setup to assure that it is configured to support an external VGA output. But, if xorg.conf is mis-configured, the vF7 will show this message:
+
+  * ![http://vf7.googlecode.com/files/Screenshot-Problem.png](http://vf7.googlecode.com/files/Screenshot-Problem.png)
